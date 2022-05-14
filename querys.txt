@@ -1,0 +1,33 @@
+create database pokedex;
+
+create table pokemon
+(
+    id          smallint auto_increment primary key,
+    numero      int,
+    nombre      varchar(50),
+    tipo        varchar(50),
+    descripcion varchar(100),
+    imagen      varchar(100)
+);
+
+insert into pokemon(numero, nombre, tipo, descripcion, imagen)
+values (2, 'Pikachu', "Fuego", 'Charmander es muy amigable, y segun fagnano es una rata', 'pikachu'),
+       (2, 'Charmander', "Fuego", 'Charmander es muy amigable, y segun fagnano pikachu es una rata', 'Charmander'),
+       (3, 'Charifer', "Viento", 'Charifer es muy amigable, y segun fagnano pikachu es una rata', 'Charifer'),
+       (4, 'Bullvasour', "Tierra", 'Bullvasour es muy amigable, y segun fagnano pikachu es una rata', 'Bullvasour');
+
+select * from pokemon;
+
+select * from usuario;
+
+drop table usuario;
+
+create table usuario
+(
+    usuario      varchar(50),
+    clave      varchar(500)
+
+);
+
+insert into usuario
+values ('admin', '81dc9bdb52d04dc20036dbd8313ed055');
